@@ -269,6 +269,8 @@ MonoBehaviour:
   hp: 2
   speed: 10
   target: {fileID: 0}
+  interval: 1.5
+  EnemyBullet: {fileID: 2923551714540088680, guid: 50dcfc20a6a24a74b8d21eae396a0168, type: 3}
 --- !u!95 &345009276252053469
 Animator:
   serializedVersion: 4

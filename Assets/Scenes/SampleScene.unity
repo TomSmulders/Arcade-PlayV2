@@ -891,6 +891,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7114842069794073562, guid: b641f785c3bdd4f4ab23ab09f1a21990, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114842069794073562, guid: b641f785c3bdd4f4ab23ab09f1a21990, type: 3}
       propertyPath: scrollSpeed
       value: -0.3
       objectReference: {fileID: 0}
@@ -938,6 +942,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7114842069794073565, guid: b641f785c3bdd4f4ab23ab09f1a21990, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114842069794073565, guid: b641f785c3bdd4f4ab23ab09f1a21990, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a283f2cbae5eb94e9de017ebf2bd93f, type: 2}
     - target: {fileID: 7114842069794073567, guid: b641f785c3bdd4f4ab23ab09f1a21990, type: 3}
       propertyPath: m_Name
       value: Background

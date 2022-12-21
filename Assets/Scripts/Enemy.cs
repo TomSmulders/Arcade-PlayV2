@@ -13,6 +13,10 @@ public class Enemy : MonoBehaviour
     public float speed;
     public Transform target;
     private bool spawned = true;
+    private bool enemyCanShoot = true;
+    public float interval;
+
+    public GameObject EnemyBullet;
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +29,28 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //enemy movement
         if (transform.position.x != target.position.x)
         {
         var step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
         }
+        //enemy shooting invoke
+        if (enemyCanShoot)
+        {
+        Invoke("EnemyShoot", interval);
+            enemyCanShoot = false;
+        }
 
     }
 
+    //enemy shooting method
+    private void EnemyShoot()
+    {
+        Debug.Log("yes");
+        GameObject spawnedBullet = Instantiate(EnemyBullet, transform.position, Quaternion.identity);
+        enemyCanShoot=true;
+    }
 
     public void takeDamage()
     {
