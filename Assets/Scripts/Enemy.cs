@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Enemy spawning move to start position
         if (transform.position.x != target.position.x)
         {
         var step = speed * Time.deltaTime;
@@ -36,7 +37,7 @@ public class Enemy : MonoBehaviour
 
     public void takeDamage()
     {
-        Debug.Log("hit the enemy");
+        //Enemy takes damage
         hp--;
         if (hp <= 0)
         {
@@ -46,7 +47,7 @@ public class Enemy : MonoBehaviour
 
     void die()
     {
-        Debug.Log("die");
+        //Enemy dies
         anim.SetBool("IsAlive", false);
         GetComponent<BoxCollider2D>().enabled = false;
         Destroy(gameObject, 0.5f);
