@@ -10,24 +10,29 @@ public class Enemy : MonoBehaviour
 
     Animator anim;
 
+    public float speed;
+    public Transform target;
+    private bool spawned = true;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.x != target.position.x)
+        {
+        var step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        }
 
     }
 
-    public void TurnOffAnimation()
-    {
-        GetComponent<Animator>().enabled = false;
-    }
 
     public void takeDamage()
     {

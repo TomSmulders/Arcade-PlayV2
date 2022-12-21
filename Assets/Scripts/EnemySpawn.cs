@@ -10,6 +10,9 @@ public class EnemySpawn : MonoBehaviour
     public float maxWait;
     private bool isSpawning;
 
+    public Transform EnemyinitPos;
+    public Transform Enemyspawnpoint;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +41,9 @@ public class EnemySpawn : MonoBehaviour
     {
         // Code to spanw your Prefab here
         isSpawning = false;
-        GameObject newObject = Instantiate(enemy);
+        GameObject newObject = Instantiate(enemy, Enemyspawnpoint.position, Quaternion.identity);
+        newObject.GetComponent<Enemy>().target = EnemyinitPos;
+
     }
 
 }
