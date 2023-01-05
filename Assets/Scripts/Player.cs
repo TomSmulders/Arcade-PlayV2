@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     public int health;
+    public float delayBeForeLoading = 5;
+    private float time;
 
     Animator anim;
 
@@ -37,5 +40,12 @@ public class Player : MonoBehaviour
         Debug.Log("die");
         anim.SetBool("PlayerDie", true);
         GetComponent<BoxCollider2D>().enabled = false;
+        Invoke("loadScene", 3f);
     }
+
+    void loadScene()
+    {
+        SceneManager.LoadScene(3);
+    }
+
 }

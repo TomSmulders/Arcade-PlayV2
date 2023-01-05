@@ -29,5 +29,10 @@ public class EnemyBullet : MonoBehaviour
             player.takeDamage();
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }

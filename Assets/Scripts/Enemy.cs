@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour 
 {
     public int hp = 2;
 
@@ -48,7 +48,6 @@ public class Enemy : MonoBehaviour
     //enemy shooting method
     private void EnemyShoot()
     {
-        Debug.Log("yes");
         GameObject spawnedBullet = Instantiate(EnemyBullet, transform.position, Quaternion.identity);
         enemyCanShoot=true;
     }
@@ -60,6 +59,7 @@ public class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             die();
+
         }
     }
 
@@ -68,6 +68,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("die");
         anim.SetBool("IsAlive", false);
         GetComponent<BoxCollider2D>().enabled = false;
+        Score.instance.AddScore(10);
         Destroy(gameObject, 0.5f);
     }
 
