@@ -18,12 +18,11 @@ public class Enemy : MonoBehaviour
 
     public GameObject EnemyBullet;
 
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-
-
     }
 
     // Update is called once per frame
@@ -34,6 +33,7 @@ public class Enemy : MonoBehaviour
         {
         var step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
         }
         
         //enemy shooting invoke
@@ -68,7 +68,8 @@ public class Enemy : MonoBehaviour
         Debug.Log("die");
         anim.SetBool("IsAlive", false);
         GetComponent<BoxCollider2D>().enabled = false;
-        Score.instance.AddScore(10);
+        Score.instance.combo++;
+        Score.instance.AddScore(10, transform);
         Destroy(gameObject, 0.5f);
     }
 

@@ -62,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void die()
+    public void die()
     {
         Debug.Log("die");
         anim.SetBool("PlayerDie", true);
@@ -74,5 +74,6 @@ public class PlayerHealth : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+
 
 }

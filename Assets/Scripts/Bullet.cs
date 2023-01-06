@@ -6,19 +6,18 @@ public class Bullet : MonoBehaviour
 {
 
     public float speed = 15f;
-    public float liveTimeBullet;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Destroy(gameObject, liveTimeBullet);
-    }
 
     // Update is called once per frame
     void Update()
     {
         
         transform.Translate(transform.right * speed * Time.deltaTime);
+
+        if (transform.position.x > 9)
+        {
+            Score.instance.combo = 0;
+            Destroy(gameObject, 0.1f);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,6 +28,7 @@ public class Bullet : MonoBehaviour
             enemy.takeDamage();
             Destroy(gameObject);
         }
+
     }
 }
 
