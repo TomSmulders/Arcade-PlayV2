@@ -9,8 +9,6 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public int maxHealth;
 
-    public float delayBeForeLoading = 5;
-    private float time;
 
     Animator anim;
 
@@ -69,7 +67,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("die");
         anim.SetBool("PlayerDie", true);
         GetComponent<BoxCollider2D>().enabled = false;
-        Invoke("loadScene", 3f);
+        Invoke("loadScene", 1);
     }
 
     void loadScene()
