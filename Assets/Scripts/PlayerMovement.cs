@@ -14,7 +14,12 @@ public class PlayerMovement : MonoBehaviour
 
     //bullet
     public GameObject bullet;
+    Animator anim;
 
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && canShoot)
         {
             GameObject spawnedBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+            anim.SetTrigger("PlayerSchoot");
             canShoot = false;
             Invoke("ResetShoot", interval);
         }

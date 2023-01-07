@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7092139321500507086}
   m_Layer: 0
   m_Name: sateliet
-  m_TagString: Untagged
+  m_TagString: Obsticals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

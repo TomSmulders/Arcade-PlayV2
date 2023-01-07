@@ -54,7 +54,6 @@ public class Enemy : MonoBehaviour
 
     public void takeDamage()
     {
-        Debug.Log("hit the enemy");
         hp--;
         if (hp <= 0)
         {
@@ -65,7 +64,6 @@ public class Enemy : MonoBehaviour
 
     void die()
     {
-        Debug.Log("die");
         anim.SetBool("IsAlive", false);
         GetComponent<BoxCollider2D>().enabled = false;
         Score.instance.combo++;

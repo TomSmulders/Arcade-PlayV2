@@ -28,7 +28,17 @@ public class Bullet : MonoBehaviour
             enemy.takeDamage();
             Destroy(gameObject);
         }
-
+        if (collision.gameObject.CompareTag("Obsticals"))
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obsticals"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
 

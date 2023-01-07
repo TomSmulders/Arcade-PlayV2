@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1033664540479907942}
   m_Layer: 0
   m_Name: Ufo01
-  m_TagString: Untagged
+  m_TagString: Obsticals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
