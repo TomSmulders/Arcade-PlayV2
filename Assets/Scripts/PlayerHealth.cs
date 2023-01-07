@@ -75,5 +75,9 @@ public class PlayerHealth : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
-
+    public IEnumerator turnOffShild()
+    {
+        yield return new WaitForSeconds(5);
+        GetComponent<BoxCollider2D>().enabled = true;
+    }
 }

@@ -14,7 +14,7 @@ public class Obsticals : MonoBehaviour
         dir = (SpaceShip.transform.position - transform.position).normalized;
         dir.x = Random.Range(dir.x - randomOffset, dir.x + randomOffset);
         dir.y = Random.Range(dir.y - randomOffset, dir.y + randomOffset);
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 7);
     }
 
     void Update()

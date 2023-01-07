@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - Bullet
   - boundary wall
+  - Obsticals
   layers:
   - Default
   - TransparentFX
