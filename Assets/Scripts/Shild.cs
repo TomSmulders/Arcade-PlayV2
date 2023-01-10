@@ -29,6 +29,7 @@ public class Shild : MonoBehaviour
             collision.enabled = false;
             PlayerHealth col = collision.gameObject.GetComponent<PlayerHealth>();
             col.StartCoroutine(col.turnOffShild());
+            Destroy(gameObject);
         }
     }
 
