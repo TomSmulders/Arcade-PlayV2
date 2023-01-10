@@ -6,8 +6,12 @@ using UnityEngine;
 public class Shild : MonoBehaviour
 {
     // Start is called before the first frame update
+    public AudioSource audioSource;
+
     void Start()
     {
+        audioSource = GameObject.Find("SoundEffects").GetComponent<AudioSource>();
+
         Destroy(gameObject, 3);
     }
 
@@ -21,6 +25,7 @@ public class Shild : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            audioSource.Play();
             collision.enabled = false;
             PlayerHealth col = collision.gameObject.GetComponent<PlayerHealth>();
             col.StartCoroutine(col.turnOffShild());
