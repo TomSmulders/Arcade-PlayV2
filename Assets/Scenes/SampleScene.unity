@@ -1173,8 +1173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawners:
   - {fileID: 1457404574}
-  - {fileID: 0}
-  - {fileID: 0}
   startTime: 2
   endTime: 15
 --- !u!1 &1448001408
