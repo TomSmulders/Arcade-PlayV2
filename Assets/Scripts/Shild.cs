@@ -27,6 +27,7 @@ public class Shild : MonoBehaviour
         {
             audioSource.Play();
             collision.enabled = false;
+            collision.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);
             PlayerHealth col = collision.gameObject.GetComponent<PlayerHealth>();
             col.StartCoroutine(col.turnOffShild());
             Destroy(gameObject);
