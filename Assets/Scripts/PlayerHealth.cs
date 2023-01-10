@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public SpriteRenderer sprite;
 
     // Start is called before the first frame update
     void Start()
@@ -52,10 +53,20 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+
+
+    public IEnumerator DamageFlicker()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.white;
+    }
+
     public void takeDamage()
     {
-        Debug.Log("hit the enemy");
+        Debug.Log("hit the player");
         health--;
+        StartCoroutine(DamageFlicker());
         if (health <= 0)
         {
             die();

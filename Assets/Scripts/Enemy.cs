@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     private bool spawned = true;
     private bool enemyCanShoot = true;
     public float interval;
+    public SpriteRenderer sprite;
 
     public GameObject EnemyBullet;
 
@@ -52,9 +53,17 @@ public class Enemy : MonoBehaviour
         enemyCanShoot=true;
     }
 
+    public IEnumerator DamageFlicker()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.15f);
+        sprite.color = Color.white;
+    }
+
     public void takeDamage()
     {
         hp--;
+        StartCoroutine(DamageFlicker());
         if (hp <= 0)
         {
             die();
