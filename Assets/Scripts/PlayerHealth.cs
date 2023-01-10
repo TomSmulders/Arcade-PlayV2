@@ -73,6 +73,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void addHealth(int amount)
+    {
+        health += amount;
+    }
+
     public void die()
     {
         Debug.Log("die");
