@@ -61,7 +61,11 @@ public class PlayerHealth : MonoBehaviour
             die();
         }
     }
-
+    public void addHealth(int amount)
+    {
+        health += amount;
+    }
+    
     public void die()
     {
         Debug.Log("die");
@@ -80,4 +84,5 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(5);
         GetComponent<BoxCollider2D>().enabled = true;
     }
+
 }

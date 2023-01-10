@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class Shild : MonoBehaviour
 {
-    private GameObject SpaceShip;
-    public float speed;
-    public float randomOffset = 0.5f;
-    Vector3 dir;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +25,7 @@ public class Shild : MonoBehaviour
             collision.enabled = false;
             PlayerHealth col = collision.gameObject.GetComponent<PlayerHealth>();
             col.StartCoroutine(col.turnOffShild());
+            Destroy(gameObject);
         }
     }
 

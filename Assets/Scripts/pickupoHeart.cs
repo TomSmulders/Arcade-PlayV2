@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class pickupoHeart : MonoBehaviour
@@ -7,7 +8,7 @@ public class pickupoHeart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(gameObject, 3);
     }
 
     // Update is called once per frame
@@ -15,4 +16,16 @@ public class pickupoHeart : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth col = collision.gameObject.GetComponent<PlayerHealth>();
+            col.addHealth(1);
+            Destroy(gameObject);
+        }
+    }
+
+    
 }

@@ -27,7 +27,7 @@ public class PickupSpawnerManiger : MonoBehaviour
     IEnumerator spawninterval(float time)
     {
         yield return new WaitForSeconds(time);
-        spawners[Random.Range(0, spawners.Length)].SpawnObstacle();
+        spawners[0].SpawnObstacle();
         float newTime = Random.Range(startTime, endTime);
         StartCoroutine(spawninterval(newTime));
         yield return null;
