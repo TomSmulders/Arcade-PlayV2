@@ -14,7 +14,7 @@ public class Score : MonoBehaviour
     public float scoreToWin = 100;
 
     public Text scoreText;
-    public Text comboText;
+    public TextMeshProUGUI comboText;
 
     public int combo = 0;
     public float scoreCombo;
@@ -29,20 +29,20 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        comboText = GameObject.Find("ComboText").GetComponent<Text>();
+        comboText = GameObject.Find("ComboText").GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
         scoreText.text = score.ToString();
-        comboText.text = combo.ToString();
+        comboText.text = combo + "x";
 
         if (score > scoreToWin)
         {
             Invoke("loadScene", 3f);
         }
-    }
+    } 
 
     public void AddScore(float ScoreAdd, Transform pos)
     {
