@@ -864,6 +864,7 @@ MonoBehaviour:
   emptyHeart: {fileID: 21300000, guid: 0a4dd9526e48f7b4f8040fc9cf383a22, type: 3}
   sprite: {fileID: 823273002}
   audioSource: {fileID: 0}
+  boxCollider2D: {fileID: 823273003}
 --- !u!114 &823272996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,6 +880,11 @@ MonoBehaviour:
 --- !u!212 &823273002 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3683787894015286997, guid: fdaadcf22337cdc47b4dd20abd874072, type: 3}
+  m_PrefabInstance: {fileID: 3683787893231639923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &823273003 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3683787894015287007, guid: fdaadcf22337cdc47b4dd20abd874072, type: 3}
   m_PrefabInstance: {fileID: 3683787893231639923}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &831996300
@@ -2223,7 +2229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3683787894015286996, guid: fdaadcf22337cdc47b4dd20abd874072, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 3683787894015286996, guid: fdaadcf22337cdc47b4dd20abd874072, type: 3}
       propertyPath: m_LocalPosition.z

@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public Sprite emptyHeart;
     public SpriteRenderer sprite;
     public AudioSource audioSource;
+    public BoxCollider2D boxCollider2D;
 
     // Start is called before the first frame update
     void Start()
@@ -99,6 +100,6 @@ public class PlayerHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
-        GetComponent<BoxCollider2D>().enabled = true;
+        boxCollider2D.enabled = true;
     }
 }
