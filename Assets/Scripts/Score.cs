@@ -14,21 +14,29 @@ public class Score : MonoBehaviour
     public float scoreToWin = 100;
 
     public Text scoreText;
+    public Text comboText;
 
     public int combo = 0;
     public float scoreCombo;
 
     public GameObject scorePrefab;
 
+
     private void Awake()
     {
         instance = this;
+    }
+
+    void Start()
+    {
+        comboText = GameObject.Find("ComboText").GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
         scoreText.text = score.ToString();
+        comboText.text = combo.ToString();
 
         if (score > scoreToWin)
         {

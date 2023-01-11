@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb826e2cbf6c5a34cbe99b30aad53beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   randomOffset: 0.5
 --- !u!70 &7861399463953243950
 CapsuleCollider2D:
