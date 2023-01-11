@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8883959635130416931}
   - component: {fileID: 6463910541837357776}
   - component: {fileID: -7092139321500507086}
+  - component: {fileID: 7861399463953243950}
+  - component: {fileID: 3203144136482811604}
+  - component: {fileID: 8209862780755609772}
   m_Layer: 0
   m_Name: sateliet
   m_TagString: Obsticals
@@ -29,8 +32,7 @@ Transform:
   m_LocalPosition: {x: -6.17, y: 12.37, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8894961298701358400}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -100,105 +102,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   randomOffset: 0.5
---- !u!1 &5814072633487848208
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8894961298701358400}
-  - component: {fileID: 6814477073637400186}
-  - component: {fileID: 5310317288104287763}
-  - component: {fileID: 7152953297377572796}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8894961298701358400
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5814072633487848208}
-  m_LocalRotation: {x: 0, y: 0, z: -0.19098026, w: 0.9815939}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8883959635130416931}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -22.02}
---- !u!70 &6814477073637400186
+--- !u!70 &7861399463953243950
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5814072633487848208}
+  m_GameObject: {fileID: 4543435164577756345}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01357177, y: 0.32567307}
-  m_Size: {x: 2.1023877, y: 5.741295}
+  m_Offset: {x: -0.055191755, y: -0.37914944}
+  m_Size: {x: 2.2399144, y: 3.9534473}
   m_Direction: 0
---- !u!61 &5310317288104287763
+--- !u!61 &3203144136482811604
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5814072633487848208}
+  m_GameObject: {fileID: 4543435164577756345}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.3370728, y: 0.58781075}
+  m_Offset: {x: -1.8942695, y: 0.41387463}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5100822, y: 1.5494969}
+  m_Size: {x: 1.293952, y: 0.75273323}
   m_EdgeRadius: 0
---- !u!61 &7152953297377572796
+--- !u!61 &8209862780755609772
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5814072633487848208}
+  m_GameObject: {fileID: 4543435164577756345}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.8230531, y: -0.2021966}
+  m_Offset: {x: 2.4991632, y: -0.4775467}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.24, y: 10.24}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.590243, y: 0.5956068}
+  m_Size: {x: 2.9494467, y: 0.8800812}
   m_EdgeRadius: 0
