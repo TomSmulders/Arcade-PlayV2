@@ -16,10 +16,13 @@ public class PlayerHealth : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public SpriteRenderer sprite;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GameObject.Find("SoundEffectPlayerDeath").GetComponent<AudioSource>();
+
         anim = GetComponent<Animator>();
     }
 
@@ -80,6 +83,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void die()
     {
+        audioSource.Play();
         Debug.Log("die");
         anim.SetBool("PlayerDie", true);
         GetComponent<BoxCollider2D>().enabled = false;
