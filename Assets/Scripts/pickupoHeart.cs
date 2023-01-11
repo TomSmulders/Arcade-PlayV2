@@ -10,7 +10,7 @@ public class pickupoHeart : MonoBehaviour
 
     void Start()
     {
-        audioSource = GameObject.Find("SoundEffects").GetComponent<AudioSource>();
+        audioSource = GameObject.Find("SoundEffectPickUp").GetComponent<AudioSource>();
 
         Destroy(gameObject, 3);
     }
